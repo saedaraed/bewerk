@@ -1,6 +1,9 @@
-import Link from "next/link";
-
+"use client";
+import { Link, usePathname } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 const Navbar = () => {
+  const locale = useLocale();
+  const pathname = usePathname();
   return (
     <div className=" relative  z-100 container w-[85%] mx-auto flex justify-between items-center py-6">
       <div className="logo">
@@ -10,35 +13,47 @@ const Navbar = () => {
       {/* navigation */}
       <div className="md:block hidden">
         <ul className="flex gap-4 text-[16px] text-white/80 font-light">
+          {/* <li><Link href="/">{t('navigation.home')}</Link></li> */}
+          <Link href="/">Home</Link>
           <li>
-            <Link href="">Home</Link>
+            <Link href="/">About</Link>
           </li>
           <li>
-            <Link href="">About</Link>
+            <Link href="/services">Services</Link>
+          </li>
+
+          <li>
+            <Link href="/branches">Branches</Link>
           </li>
           <li>
-            <Link href="">Services</Link>
+            <Link href="/">Job</Link>
           </li>
           <li>
-            <Link href="">Branches</Link>
+            <Link href="/">Patner Job</Link>
           </li>
           <li>
-            <Link href="">Job</Link>
-          </li>
-          <li>
-            <Link href="">Patner Job</Link>
-          </li>
-          <li>
-            <Link href="">Contact</Link>
+            <Link href="/">Contact</Link>
           </li>
         </ul>
       </div>
-      
+
       {/* lang */}
       <div className="flex gap-1">
-        <button>DE</button>
+        <Link
+          href={pathname}
+          locale="de"
+          className={locale === "de" ? "font-bold" : ""}
+        >
+          DE
+        </Link>
         <span>/</span>
-        <button>EN</button>
+        <Link
+          href={pathname}
+          locale="en"
+          className={locale === "en" ? "font-bold" : ""}
+        >
+          EN
+        </Link>
       </div>
     </div>
   );

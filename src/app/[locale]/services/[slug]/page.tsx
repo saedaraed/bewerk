@@ -9,12 +9,8 @@ interface BranchData {
   steps: string[];
 }
 
-type BranchKey = keyof typeof brachesData;
 
-interface Props {
-  params: { slug: BranchKey };
-}
-const brachesData: Record<string, BranchData> = {
+const servicesData: Record<string, BranchData> = {
   haushaltsreinigung: {
     title: "Professionelle Büroreinigung für Ihren Erfolg",
     name: "Büroreinigung",
@@ -33,10 +29,16 @@ const brachesData: Record<string, BranchData> = {
   //     title: 'industrie',
   //     description: 'Unsere Buroreinigungsdienste sorgen',
   //   },
-};
+}as const;
 
-export default function BranchDetails({ params }: Props) {
-  const service = brachesData[params.slug];
+type BranchKey = keyof typeof servicesData;
+
+
+export default async function ServiceDetails({ params }: {
+  params: Promise<{ slug: BranchKey }> 
+}) {
+  const { slug } = await params;
+  const service = servicesData[slug];
 
   if (!service) {
     return <p>Service not found</p>;

@@ -27,13 +27,15 @@ const brachesData: Record<string, BranchData> = {
 }as const; 
 type BranchKey = keyof typeof brachesData;
 
-interface Props {
-  params: { slug: BranchKey };
-}
 
 
-export default function BranchDetails({ params }: Props) {
-  const branch = brachesData[params.slug];
+
+export default async function BranchDetails({ params }: {
+  params: Promise<{ slug: BranchKey }> 
+}) {
+  const { slug } = await params;
+
+  const branch = brachesData[slug];
 
   if (!branch) {
     return <p>Service not found</p>;

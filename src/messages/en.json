@@ -1,12 +1,10 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "Your home deserves the best cleaning",
-      "discription": "Experience professional cleaning services that leave your space spotless, fresh, and hygienic. Leave the work to us and enjoy your free time."
-
-    },
-    "about": "Go to the About Us page",
-          "contact": "Go to the contact page"
-
+      "title": "Your home deserves the best",
+      "cleaning": "cleaning",
+      "description": "Experience professional cleaning services that leave your space spotless, fresh, and hygienic. Leave the work to us and enjoy your free time.",
+      "bookNow": "Book Now"
+    }
   }
 }

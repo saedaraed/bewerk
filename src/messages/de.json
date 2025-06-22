@@ -1,12 +1,10 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "Ihr Zuhause verdient die beste Reinigung",
-      "discription": "Erleben Sie professionelle Reinigungsdienste, die Ihre Räume makellos, frisch und hygienisch hinterlassen. Überlassen Sie uns die Arbeit und genießen Sie Ihre freie Zeit."
-
-    },
-    "about": "Zur Über-uns-Seite",
-          "contact": " to the contact page"
-
+      "title": "Ihr Zuhause verdient die beste",
+      "cleaning": "Reinigung",
+      "description": "Erleben Sie professionelle Reinigungsdienste, die Ihre Räume makellos, frisch und hygienisch hinterlassen. Überlassen Sie uns die Arbeit und genießen Sie Ihre freie Zeit.",
+      "bookNow": "Jetzt buchen"
+    }
   }
 }

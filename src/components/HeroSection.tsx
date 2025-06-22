@@ -3,8 +3,8 @@ import Button from "./Button";
 
 const HeroSection = () => {
   return (
-    <section className="container w-[85%] mx-auto h-screen flex md:flex-row flex-col items-center">
-      <div className="md:w-1/2 w-full">
+    <section className="container w-[85%] mx-auto h-screen flex md:flex-row flex-col mt-20 ">
+      <div className="md:w-1/2 w-full md:mt-10 mt-0">
         <h1 className="font-bold md:text-[48px] text-[30px] md:mb-6 mb-4">Ihr Zuhause verdient die beste <span className="text-[#2BA7FF]">Reinigung</span> </h1>
         <p className="md:text-[20px] text-[16px] leading-[40px] md:mb-12 mb-6">
           Erleben Sie professionelle Reinigungsdienste, die Ihre Räume makellos,
