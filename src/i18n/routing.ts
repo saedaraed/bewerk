@@ -3,18 +3,21 @@ import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
   locales: ["en", "de"],
-
   defaultLocale: "de",
-
- pathnames: {
+  localePrefix: "always",
+   pathnames: {
     "/": {
     en: "/",
     de: "/",
   },
 
-  "/contact": {
-    en: "/contact-me",
-    de: "/kontaktiere-mich",
+  // "/contact": {
+  //   en: "/contact-me",
+  //   de: "/kontaktiere-mich",
+  // },
+   "/contact": {
+    en: "/contact",
+    de: "/contact",
   },
   "/services": {
     en: "/services",
@@ -24,7 +27,15 @@ export const routing = defineRouting({
     en: "/branches",
     de: "/branches",
   },
-}
+  "/partner": {
+    en: "/partner",
+    de: "/partner",
+  },
+  "/join-us": {
+    en: "/join-us",
+    de: "/join-us",
+  },
+} 
 });
 
 

@@ -23,7 +23,7 @@ import AppSection from "@/components/AppSection";
 
 // export default HomePage;
 
-const HomePage =()=>{
+const HomePage = () =>{
   // const t = useTranslations("HomePage")
    return (
     <>

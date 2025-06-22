@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const AboutSection = () => {
   return (
-    <section className="container w-[85%] mx-auto md:h-screen flex md:flex-row flex-col items-center">
+    <section className="container w-[85%] mx-auto md:h-screen flex md:flex-row flex-col items-center md:mt-0 mt-30">
       <div className="md:w-[25%] w-full bg-white md:h-[583px] h-full flex md:flex-col flex-row rounded-[40px] md:rounded-br-none md:rounded-tr-none rounded-bl-none rounded-br-none   overflow-hidden">
         <div className="h-[50%]">
           <Image
