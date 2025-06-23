@@ -10,6 +10,7 @@ import ServicesSection from "@/components/ServicesSection";
 import BranchesSection from "@/components/BranchesSection";
 import Contact from "@/components/Contact";
 import AppSection from "@/components/AppSection";
+import TestimonialsSection from "@/components/TestimonialsSections";
 // const HomePage = async () => {
 //   const t = await getTranslations("HomePage");
 
@@ -36,6 +37,7 @@ const HomePage = () =>{
     <ServicesSection/>
     <AppSection/>
     <BranchesSection/>
+    <TestimonialsSection/>
     <Contact/>
     </>
    

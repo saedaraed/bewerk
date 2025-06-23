@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const BranchesSection = () => {
   return (
-    <section className="container w-[85%] mx-auto mt-20 mb-[200px]">
+    <section className="container w-[85%] mx-auto mt-20 mb-[100px]">
         <div className="relative flex flex-col items-center justify-center mb-14">
         <div className=" bg-black w-full absolute z-10">
           <h2 className="font-bold md:text-[48px] text-[30px] text-center  ">
