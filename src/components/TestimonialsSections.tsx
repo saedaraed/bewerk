@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-
 import "./styles.css";
 
-import { EffectCards } from "swiper/modules";
+import { EffectCards , Autoplay  } from "swiper/modules";
 import Image from "next/image";
 
 export default function TestimonialsSection() {
@@ -43,7 +42,8 @@ export default function TestimonialsSection() {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards]}
+          modules={[EffectCards, Autoplay]}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="mySwiper md:w-[394px] w-[320px] h-[344px]"
       >
         <SwiperSlide className="rounded-[16px] p-8">
