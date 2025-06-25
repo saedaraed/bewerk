@@ -1,46 +1,50 @@
 import Button from "@/components/Button";
 import Contact from "@/components/Contact";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-interface BranchData {
-  title: string;
-  name: string;
-  description: string | string[];
-  steps: string[];
+async function getAllBranchesSlugs() {
+  const enMessages = await import('../../../../messages/en.json');
+  const serviceDetails = enMessages.ServicesDetails.details;
+  return Object.keys(serviceDetails);
 }
-const brachesData: Record<string, BranchData> = {
-  industrie: {
-    title: "Professionelle Büroreinigung für Ihren Erfolg",
-    name: "Büroreinigung",
-    description: [
-      "Unsere Büroreinigungsdienste sorgen nicht nur für Ordnung, sondern schaffen auch eine hygienische und angenehme Atmosphäre, in der sich Ihre Mitarbeitenden und Kund:innen wohlfühlen. Ein sauberes Büro steigert nicht nur die Produktivität, sondern hinterlässt auch einen positiven Eindruck bei Besuchern und Geschäftspartnern.",
-      "Wir bieten flexible Reinigungsintervalle – ob täglich, wöchentlich oder individuell nach Ihrem Bedarf. Unser geschultes Fachpersonal verwendet umweltfreundliche Reinigungsmittel und moderne Techniken, um jedes Detail gründlich zu reinigen – von Schreibtischen über Gemeinschaftsflächen bis hin zu Sanitäranlagen.",
-    ],
-    steps: [
-      "Erfahrenes Reinigungsteam",
-      "Erstellung eines Reinigungsplans",
-      "Durchführung durch unser geschultes Personal",
-      "Regelmäßige Qualitätskontrollen",
-    ],
-  },
 
-}as const; 
-type BranchKey = keyof typeof brachesData;
+type Props = {
+   params: Promise<{
+    locale: string;
+    slug: string;
+  }>;
+
+};
+
+export async function generateStaticParams() {
+  const slugs = await getAllBranchesSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 
 
+export default async function BranchDetails(props: Props) {
+      const { slug } = await props.params;
 
-export default async function BranchDetails({ params }: {
-  params: Promise<{ slug: BranchKey }> 
-}) {
-  const { slug } = await params;
+  const t = await getTranslations("BranchesDetails");
+  const translate = await getTranslations("HomePage");
 
-  const branch = brachesData[slug];
+const branch = t.raw(`details.${slug}`) as {
+    title: string;
+    name: string; 
+    image:string;
+    description: string[];
+    steps: {
+      title: string;
+      items: string[];
+    };
+  };
 
-  if (!branch) {
-    return <p>Service not found</p>;
+ if (!branch || !branch.title) { 
+    notFound(); 
   }
-
   return (
     <main>
       <div className="w-full h-[380px] flex items-center justify-center bg-[#100F0F] absolute z-10 top-0">
@@ -52,8 +56,8 @@ export default async function BranchDetails({ params }: {
       <div className="container w-[70%] mx-auto">
         <div className="w-full h-[60vh] rounded-[40px] overflow-hidden relative z-20 mt-[200px]">
           <Image
-            src="/hero-image.jpg"
-            alt="hero-image"
+            src={branch.image}
+            alt={branch.title}
             width={600}
             height={600}
             className="w-full h-full object-cover "
@@ -69,8 +73,8 @@ export default async function BranchDetails({ params }: {
         ) : (
           <p className="text-[20px] text-white/80 mt-8">{branch.description}</p>
         )}
-        <h4 className="text-[20px] font-bold mt-12">So läuft der Service ab</h4>
-        {branch.steps.map((step , index) => (
+        <h4 className="text-[20px] font-bold mt-12">{branch.steps.title}</h4>
+        {branch.steps.items.map((step , index) => (
           <div className="flex gap-4 mt-6" key={index}>
             <svg
               width="22"
@@ -94,7 +98,7 @@ export default async function BranchDetails({ params }: {
             <p className="text-[20px] text-white/80">{step}</p>
           </div>
         ))}
-        <h4 className="text-[20px] font-bold mt-12">Warum wir?</h4>
+        <h4 className="text-[20px] font-bold mt-12">{t('why-us.title')}</h4>
 
         <div className="mt-8 flex md:flex-row flex-col items-center justify-between gap-8">
           <div className="flex flex-col items-center">
@@ -1616,7 +1620,7 @@ export default async function BranchDetails({ params }: {
               </svg>
             </div>
             <p className="text-[20px] text-white/80 mt-4 text-center">
-              Erfahrenes Reinigungsteam
+            {t('why-us.reasons.one')}
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -1709,7 +1713,7 @@ export default async function BranchDetails({ params }: {
               </svg>
             </div>
             <p className="text-[20px] text-white/80 mt-4 text-center">
-              Umweltfreundliche Reinigungsmittel
+             {t('why-us.reasons.one')}
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -1803,7 +1807,7 @@ export default async function BranchDetails({ params }: {
                 />
               </svg>
             </div>
-            <p className="text-[20px] text-white/80 mt-4 text-center">Flexible Zeitpläne</p>
+            <p className="text-[20px] text-white/80 mt-4 text-center">{t('why-us.reasons.one')}</p>
           </div>
         </div>
         <h4 className="text-[20px] font-bold mt-12">Our Work</h4>
@@ -1847,7 +1851,7 @@ export default async function BranchDetails({ params }: {
        
         </div>
         <div className="my-8 flex justify-center mb-[200px]">
-      <Button name="Jetzt buchen"/>
+      <Button name={translate('heroSection.bookNow')} href="/contact"/>
 
         </div>
       </div>

@@ -36,6 +36,14 @@ export const routing = defineRouting({
     en: "/join-us",
     de: "/join-us",
   },
+   "/terms": {
+    en: "/terms",
+    de: "/terms",
+  },
+   "/privacy": {
+    en: "/privacy",
+    de: "/privacy",
+  },
 } 
 });
 

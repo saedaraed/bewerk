@@ -1,6 +1,9 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "../i18n/routing";
 
-const Footer = () => {
+const Footer =async () => {
+      const t = await getTranslations("HomePage");
+
   return (
     <footer className="container w-[85%] mx-auto mt-10 mb-10">
       <div className="flex justify-between md:flex-row flex-col">
@@ -8,35 +11,35 @@ const Footer = () => {
         <div>
           <ul className="flex md:flex-row flex-col gap-4 text-[16px] font-light">
             <li>
-              <Link href="">Home</Link>
+              <Link href="/">{t('navbar.home')}</Link>
             </li>
             <li>
-              <Link href="">About</Link>
+              <Link href="/">{t('navbar.about')}</Link>
             </li>
             <li>
-              <Link href="">Services</Link>
+              <Link href="/services">{t('navbar.services')}</Link>
             </li>
             <li>
-              <Link href="">Branches</Link>
+              <Link href="/branches">{t('navbar.branches')}</Link>
             </li>
             <li>
-              <Link href="">Job</Link>
+              <Link href="/join-us">{t('navbar.job')}</Link>
             </li>
             <li>
-              <Link href="">Patner Job</Link>
+              <Link href="/partner">{t('navbar.partner-job')}</Link>
             </li>
             <li>
-              <Link href="">Contact</Link>
+              <Link href="/contact">{t('navbar.contact')}</Link>
             </li>
           </ul>
         </div>
         <div className="">
           <ul className="flex md:flex-row flex-col md:mt-0 mt-4 gap-4 text-[16px] font-light">
             <li>
-              <Link href="">Impressum</Link>
+              <Link href="/terms">AGB</Link>
             </li>
             <li>
-              <Link href="">Datenschutz</Link>
+              <Link href="/privacy">Datenschütz</Link>
             </li>
           </ul>
         </div>

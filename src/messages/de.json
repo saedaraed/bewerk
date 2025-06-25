@@ -10,8 +10,7 @@
       "contact":"Kontakt"
     },
     "heroSection": {
-      "title": "Ihr Zuhause verdient die beste",
-      "cleaning": "Reinigung",
+      "title": "Ihr Zuhause verdient die beste Reinigung",
       "description": "Erleben Sie professionelle Reinigungsdienste, die Ihre Räume makellos, frisch und hygienisch hinterlassen. Überlassen Sie uns die Arbeit und genießen Sie Ihre freie Zeit.",
       "bookNow": "Jetzt buchen"
     },
@@ -142,7 +141,134 @@
 "message":"Erzahl uns uber dich",
 "send":"Senden"
 },
+"Branches": {
+  "title-section" :"Branchen",
+  "show-more":"Mehr anzeigen",
+  "title": "Branchen",
+  "description": "Vielseitige Branchenlösungen mit Fachkompetenz.",
+  "Branches": [
+    {
+      "slug": "residential-cleaning",
+      "title": "Wohnungsreinigung",
+      "image": "/hero-image.jpg"
+    },
+    {
+      "slug": "commercial-cleaning",
+      "title": "Gewerbliche Reinigung",
+      "image": "/hero-image.jpg"
+    },
+    {
+      "slug": "post-construction-cleaning",
+      "title": "Bauendreinigung",
+      "image": "/hero-image.jpg"
+    },
+    {
+      "slug": "industrial-cleaning",
+      "title": "Industriereinigung",
+      "image": "/hero-image.jpg"
+    },
+    {
+      "slug": "outdoor-cleaning",
+      "title": "Außenreinigung",
+      "image": "/hero-image.jpg"
+    }
+  ]
+},
+"BranchesDetails": {
+  "why-us": {
+      "title": "Warum wir?",
+      "reasons": {
+        "one": "Erfahrenes Reinigungsteam",
+        "two": "Umweltfreundliche Reinigungsmittel",
+        "three": "Flexible Zeitpläne"
+      }
+    },
+  "details": {
+  "residential-cleaning": {
+    "title": "Wohnungsreinigung",
+      "image": "/hero-image.jpg",
+    "description": [
+      "Unsere Wohnungsreinigungsdienste bieten eine gründliche Pflege für Ihr Zuhause und Ihre Wohnräume.",
+      "Von regelmäßiger Reinigung bis zur Grundreinigung helfen wir Ihnen, ein sauberes und gemütliches Zuhause zu erhalten."
+    ],
+    "steps": {
+      "title": "So funktioniert dieser Bereich",
+      "items": [
+        "Individuelle Einschätzung des Reinigungsbedarfs",
+        "Geplante regelmäßige oder gründliche Reinigungen",
+        "Verwendung umweltfreundlicher Produkte und Methoden"
+      ]
+    }
+  },
+  "commercial-cleaning": {
+    "title": "Gewerbliche Reinigung",
+      "image": "/hero-image.jpg",
+    "description": [
+      "Maßgeschneiderte Reinigungslösungen für Büros und Geschäftsräume.",
+      "Wir sorgen für eine hygienische und professionelle Arbeitsumgebung für Ihr Team und Ihre Kunden."
+    ],
+    "steps": {
+      "title": "So funktioniert dieser Bereich",
+      "items": [
+        "Erstinspektion vor Ort",
+        "Reinigungsplan je nach Büroaufteilung erstellen",
+        "Laufende Pflege mit minimaler Unterbrechung"
+      ]
+    }
+  },
+  "post-construction-cleaning": {
+    "title": "Bauendreinigung",
+      "image": "/hero-image.jpg",
+    "description": [
+      "Nach Bauarbeiten oder Renovierungen sorgt unser Reinigungsteam dafür, dass Ihre Immobilie bezugsfertig ist.",
+      "Wir entfernen Schutt, Staub und Rückstände von allen Oberflächen."
+    ],
+    "steps": {
+      "title": "So funktioniert dieser Bereich",
+      "items": [
+        "Entfernen von Staub und Bauschutt",
+        "Reinigung von Böden, Wänden und Einrichtungen",
+        "Abschließender Feinschliff und Desinfektion"
+      ]
+    }
+  },
+  "industrial-cleaning": {
+    "title": "Industriereinigung",
+      "image": "/hero-image.jpg",
+    "description": [
+      "Spezialisierte Reinigung für industrielle Umgebungen wie Fabriken und Lagerhallen.",
+      "Wir übernehmen die gründliche Reinigung von Maschinenbereichen, Produktionsflächen und mehr."
+    ],
+    "steps": {
+      "title": "So funktioniert dieser Bereich",
+      "items": [
+        "Analyse der industriellen Reinigungsanforderungen",
+        "Einsatz von Hochleistungsreinigungsgeräten",
+        "Sicherheitsgerechte Entsorgung von Abfällen"
+      ]
+    }
+  },
+  "outdoor-cleaning": {
+    "title": "Außenreinigung",
+      "image": "/hero-image.jpg",
+    "description": [
+      "Pflegen Sie ein einladendes und ordentliches Erscheinungsbild mit unseren Außenreinigungsdiensten.",
+      "Wir kümmern uns ganzjährig um Gärten, Wege und Grünflächen."
+    ],
+    "steps": {
+      "title": "So funktioniert dieser Bereich",
+      "items": [
+        "Inspektion der Garten- und Außenbereiche",
+        "Rasen mähen, kehren und Unrat entfernen",
+        "Regelmäßige Pflege der Grünflächen"
+      ]
+    }
+  }
+}
+},
   "Services": {
+      "title-section" :"Unsere Dienstleistungen",
+  "show-more":"Mehr anzeigen",
     "title": "Unsere Dienstleistungen",
     "description": " Maßgeschneiderte Reinigungslösungen für höchste Ansprüche.",
     "services": [
@@ -355,5 +481,25 @@
         }
       }
     }
+  },
+  "Terms":{
+   "title": "Allgemeine Geschäftsbedingungen",
+      "content": [
+        "Durch den Zugriff auf und die Nutzung der Dienste von Bewerk stimmen Sie diesen Allgemeinen Geschäftsbedingungen zu.",
+        "Unsere Dienstleistungen richten sich an private und gewerbliche Kunden entsprechend der gebuchten Reinigungsart.",
+        "Termine müssen mindestens 24 Stunden im Voraus storniert oder verschoben werden.",
+        "Bewerk haftet nicht für Schäden, die durch falsche Angaben des Kunden entstehen.",
+        "Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer, sofern nicht anders angegeben."
+      ]
+  },
+  "Privacy":{
+    "title": "Datenschutzerklärung",
+      "content": [
+        "Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen.",
+        "Personenbezogene Daten werden nur im Einklang mit den geltenden Datenschutzgesetzen erhoben, verarbeitet und genutzt.",
+        "Wir geben Ihre Daten nicht ohne Ihre Zustimmung an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",
+        "Unsere Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern.",
+        "Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten."
+      ]
   }
 }

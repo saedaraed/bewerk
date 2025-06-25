@@ -2,18 +2,29 @@ import Button from "@/components/Button";
 import Contact from "@/components/Contact";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
+async function getAllServiceSlugs() {
+  const enMessages = await import('../../../../messages/en.json');
+  const serviceDetails = enMessages.ServicesDetails.details;
+  return Object.keys(serviceDetails);
+}
 type Props = {
-  params: {
+   params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
+
 };
 
+export async function generateStaticParams() {
+  const slugs = await getAllServiceSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 
 export default async function ServiceDetails(props: Props) {
-      const { slug } = props.params;
+      const { slug } = await props.params;
   const t = await getTranslations("ServicesDetails");
   const translate = await getTranslations("HomePage");
 
@@ -28,10 +39,9 @@ const service = t.raw(`details.${slug}`) as {
     };
   };
 
-  if (!service) {
-    return <p>Service not found</p>;
+ if (!service || !service.title) { 
+    notFound(); 
   }
-
   return (
     <main>
       <div className="w-full h-[380px] flex items-center justify-center bg-[#100F0F] absolute z-10 top-0">
@@ -1840,7 +1850,7 @@ const service = t.raw(`details.${slug}`) as {
        
         </div>
         <div className="my-8 flex justify-center mb-[200px]">
-          <Button name={translate('heroSection.bookNow')}/>
+          <Button name={translate('heroSection.bookNow')} href="/contact"/>
 
 
         </div>

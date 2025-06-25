@@ -1,14 +1,21 @@
+import { getTranslations } from "next-intl/server";
 import BranchCard from "./BranchCard";
 import Button from "./Button";
 
 
-const BranchesSection = () => {
+const BranchesSection = async() => {
+    const t = await getTranslations("Branches");
+  const branches = t.raw("Branches") as {
+    slug: string;
+    title: string;
+    image: string;
+  }[];
   return (
     <section className="container w-[85%] mx-auto mt-20 mb-[100px]">
         <div className="relative flex flex-col items-center justify-center mb-14">
         <div className=" bg-black w-full absolute z-10">
           <h2 className="font-bold md:text-[48px] text-[30px] text-center  ">
-            Branchen
+          {t('title-section')}
           </h2>
         </div>
         <div>
@@ -34,14 +41,13 @@ const BranchesSection = () => {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <BranchCard title="Industrie" imageSrc="/hero-image.jpg" link="industrie"/>
-        <BranchCard title="Industrie" imageSrc="/hero-image.jpg" link="industrie"/>
-        <BranchCard title="Industrie" imageSrc="/hero-image.jpg" link="industrie"/>
-        <BranchCard title="Industrie" imageSrc="/hero-image.jpg" link="industrie"/>
-        <BranchCard title="Industrie" imageSrc="/hero-image.jpg" link="industrie"/>
+         {branches.slice(0, 5).map((branch , index) => (
+        <BranchCard key={index} title={branch.title} imageSrc={branch.image} link={branch.slug}/>
+         ))}
+      
         <div className="flex justify-center items-center">
           {" "}
-            <Button name="Show More" href="/branches"/>
+            <Button name={t('show-more')} href="/branches"/>
         </div>
       </div>
     </section>
