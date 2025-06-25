@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/Button";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const Partner = () => {
@@ -23,25 +24,26 @@ const Partner = () => {
     e.preventDefault();
     console.log(formData);
   };
+   const t =  useTranslations("Job");
 
   return (
     <main>
       <div className="absolute top-0 bg-[#100F0F] w-full py-30 z-2">
         <h2 className="font-bold md:text-[48px] text-[30px] md:mb-6 mb-4 text-center">
-          Werde Teil unseres Teams
+         {t('title')}
         </h2>
       </div>
       <div className="md:w-[60%] w-[90%]  mx-auto mt-60 text-[20px] text-center py-10 text-white/80 leading-[40px]">
-        <p>Wir bei Bewek sind setes auf der Suche nach engagierten und motivierten Personalichkeiten , die unser Team verstarken mochten . Wenn du nach einer beruflichen Chance in einem professionellen und angenehmen Umfeld suchst - dann bist du hier genau richtig!</p>
+        <p>{t('description')}</p>
       </div>
       <div className="md:w-[60%] w-[90%] mx-auto bg-[#100F0F] rounded-[40px] p-10 mb-[100px]">
-        <h2 className="text-[25px]">Bewerbungsformular</h2>
+        <h2 className="text-[25px]">{t('form-title')}</h2>
         <form onSubmit={handleSubmit} className="space-y-6 mt-6">
           <div>
             <input
               type="text"
               name="name"
-              placeholder="Vollständiger Name"
+              placeholder={t('Full-name')}
               id="name"
               onChange={handleChange}
               value={formData.fullName}
@@ -54,7 +56,7 @@ const Partner = () => {
             <input
               type="email"
               name="email"
-              placeholder="E-mail"
+              placeholder={t('email')}
               id="email"
               onChange={handleChange}
               value={formData.email}
@@ -67,7 +69,7 @@ const Partner = () => {
             <input
               type="tel"
               name="telefon"
-              placeholder="Telefonnummer"
+              placeholder={t('telephone')}
               id="telephone"
               onChange={handleChange}
               value={formData.telephone}
@@ -83,9 +85,9 @@ const Partner = () => {
             required
             className="w-full p-3 rounded-lg border border-white/50 text-white/50 bg-[#100F0F] outline-none focus:border-[#2BA7FF]"
           >
-            <option value="">Geschlecht auswählen</option>
-            <option value="männlich">Männlich</option>
-            <option value="weiblich">Weiblich</option>
+            <option value="">{t('gender')}</option>
+            <option value="männlich">{t('male')}</option>
+            <option value="weiblich">{t('female')}</option>
           </select>
           </div>
 
@@ -93,7 +95,7 @@ const Partner = () => {
             <input
               type="text"
               name="address"
-              placeholder="Adresse"
+              placeholder={t('Adresse')}
               id="address"
               onChange={handleChange}
               value={formData.address}
@@ -115,7 +117,7 @@ const Partner = () => {
             <textarea
               name="message"
               id="message"
-              placeholder="Erzahl uns uber dich"
+              placeholder={t('message')}
               rows={5}
               onChange={handleChange}
               value={formData.message}
@@ -124,7 +126,7 @@ const Partner = () => {
             ></textarea>
           </div>
 
-          <Button name="Senden" textColor = "text-white" bgColor = "bg-[#2BA7FF]"/>
+          <Button name={t('send')} textColor = "text-white" bgColor = "bg-[#2BA7FF]"/>
         </form>
       </div>
     </main>

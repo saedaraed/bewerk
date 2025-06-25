@@ -1,10 +1,359 @@
 {
   "HomePage": {
+    "navbar":{
+      "home":"Home",
+      "about":"Über uns ",
+      "services":"Services",
+      "branches":"Braches",
+      "job" :"Job",
+      "partner-job":"Partner Job",
+      "contact":"Kontakt"
+    },
     "heroSection": {
       "title": "Ihr Zuhause verdient die beste",
       "cleaning": "Reinigung",
       "description": "Erleben Sie professionelle Reinigungsdienste, die Ihre Räume makellos, frisch und hygienisch hinterlassen. Überlassen Sie uns die Arbeit und genießen Sie Ihre freie Zeit.",
       "bookNow": "Jetzt buchen"
+    },
+    "aboutSection": {
+      "title": "Über Bewerk",
+      "paragraph1": "Bei Bewerk sind wir mehr als nur ein Reinigungsunternehmen – wir sind Ihre Partner für eine gesündere und angenehmere Umgebung. Mit einem engagierten Team, umweltfreundlichen Produkten und einem starken Qualitätsversprechen bringen.",
+      "paragraph2": "Mit einem engagierten Team, umweltfreundlichen Produkten und einem starken Qualitätsversprechen bringen.",
+      "button": "Mehr erfahren",
+      "cardTitle": "Haushaltsreinigung",
+      "cardDescription": "Bei Bewerk legen wir großen Wert auf Qualität, Zuverlässigkeit und Kundenzufriedenheit.",
+      "features": {
+        "feature1": "Professionelle Reinigungsteams",
+        "feature2": "Schneller & zuverlässiger Service",
+        "feature3": "Umweltfreundliche Produkte",
+        "feature4": "Individuell anpassbare Leistungen"
+      }
+    },
+    "appSection": {
+      "title": "Unsere App",
+      "description": "Unsere innovative App hilft deinem Unternehmen, Mitarbeiter effizient zu verwalten, die Qualität zu steigern und wertvolles Feedback von Kunden zu sammeln. Mit einem vollständigen System für Team- und Auftragsmanagement bleiben keine Wünsche offen – alles in einer App.",
+      "features": [
+        {
+          "title": "Google Live Tracking",
+          "description": "Verfolge deine Mitarbeiter oder Bestellungen in Echtzeit mit Google Maps."
+        },
+        {
+          "title": "Order Live Tracking",
+          "description": "Kunden können jederzeit den Status ihrer Bestellung einsehen."
+        },
+        {
+          "title": "Checkliste",
+          "description": "Aufgaben organisiert und vollständig im Blick – keine Schritte vergessen."
+        },
+        {
+          "title": "Fotos",
+          "description": "Dokumentation durch Vorher-Nachher-Bilder direkt aus der App."
+        },
+        {
+          "title": "Videos",
+          "description": "Noch mehr Transparenz durch kurze Videoaufnahmen vom Service."
+        },
+        {
+          "title": "Kommentare",
+          "description": "Kunden können direkt Feedback geben, Teammitglieder kommunizieren intern."
+        }
+      ],
+      "footer": {
+        "text": "Jetzt herunterladen und Reinigung auf das nächste Level bringen!",
+        "button": "App herunterladen"
+      }
+    },
+    "testimonials": {
+      "title": "Kundenmeinungen",
+      "testi": [
+        {
+          "name": "Sarah L.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Bewerk hat unser Büro zum Glänzen gebracht! Sehr pünktlich und professionell. Sehr zu empfehlen!"
+        },
+        {
+          "name": "Michael T.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Ausgezeichnete Reinigung, freundliches Personal und zuverlässig. Ich werde ihren Service definitiv wieder nutzen."
+        },
+        {
+          "name": "Anna K.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Schnelle und gründliche Reinigung. Das Team ist sehr professionell und respektvoll."
+        },
+        {
+          "name": "James B.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Großartige Erfahrung! Mein Zuhause fühlt sich frisch und sauber dank Bewerk."
+        },
+        {
+          "name": "James B.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Großartige Erfahrung! Mein Zuhause fühlt sich frisch und sauber dank Bewerk."
+        },
+        {
+          "name": "James B.",
+          "image": "/images/testimonials/person.jpg",
+          "rating": 5,
+          "review": "Großartige Erfahrung! Mein Zuhause fühlt sich frisch und sauber dank Bewerk."
+        }
+      ]
+    }
+  },
+  "Contact": {
+    "high-title":"Kontaktiere uns für weitere Informationen",
+    "title": "Kontaktiere uns für weitere Informationen – wir sind für dich da!",
+    "description": "Registriere dich jetzt und profitiere von allen Vorteilen – starte mit bewerk die Veränderung deines Zuhauses oder Büros!",
+    "location": "Heidelberg, Deutschland",
+    "phone": "(123) 456-7890",
+    "email": "info@bewerk.net"
+  },
+  "Partner-job":{
+"title":"Partnerschaftsanfrage - Formular",
+"question":"Glaubst du an unsere Werte und möchtest Teil unseres Erfolgs werden? ",
+"answer":"Fülle dieses Formular aus, um dich als Partner bei uns zu bewerben und gemeinsam die Zukunft zu gestalten.",
+"form-title":"Bewerbungsformular",
+"owner-name":"Name des Eigentümers",
+"company-name":"Firmenname",
+"email":"E-mail",
+"telephone":"Telefonnummer",
+"address":"Adresse",
+"birth-date":"Geburtsdatum",
+"message":"Erzahl uns uber dich",
+"send":"Senden"
+},
+  "Job":{
+"title":"Werde Teil unseres Teams",
+"description":"Wir bei Bewek sind setes auf der Suche nach engagierten und motivierten Personalichkeiten , die unser Team verstarken mochten . Wenn du nach einer beruflichen Chance in einem professionellen und angenehmen Umfeld suchst - dann bist du hier genau richtig!",
+"form-title":"Bewerbungsformular",
+"Full-name":"Vollständiger Name",
+"email":"E-mail",
+"telephone":"Telefonnummer",
+"gender":"Geschlecht",
+"female":"Weiblich",
+"male":"Männlich",
+"address":"Adresse",
+"birth-date":"Geburtsdatum",
+"message":"Erzahl uns uber dich",
+"send":"Senden"
+},
+  "Services": {
+    "title": "Unsere Dienstleistungen",
+    "description": " Maßgeschneiderte Reinigungslösungen für höchste Ansprüche.",
+    "services": [
+      {
+        "slug": "haushaltsreinigung",
+        "title": "Haushaltsreinigung",
+        "shortDescription": "Sorgfältige Reinigung für ein frisches Zuhause.",
+        "icon": ""
+     
+      },
+      {
+        "slug": "buero-reinigung",
+        "title": "Büroreinigung",
+        "shortDescription": "Gründliche Reinigung für produktive Arbeitsumgebungen.",
+        "icon": ""
+      },
+      {
+        "slug": "fensterreinigung",
+        "title": "Fensterreinigung",
+        "shortDescription": "Streifenfreier Glanz für klare Sicht.",
+        "icon": ""
+      },
+      {
+        "slug": "teppichreinigung",
+        "title": "Teppichreinigung",
+        "shortDescription": "Tiefenreinigung für frische und hygienische Teppiche.",
+        "icon": ""
+      },
+      {
+        "slug": "bauendreinigung",
+        "title": "Bauendreinigung",
+        "shortDescription": "Professionelle Reinigung nach Bau- oder Renovierungsarbeiten.",
+        "icon": ""
+      },
+      {
+        "slug": "umzugsreinigung",
+        "title": "Umzugsreinigung",
+        "shortDescription": "Makellose Übergabe bei Ein- oder Auszug.",
+        "icon": ""
+      },
+      {
+        "slug": "grundreinigung",
+        "title": "Grundreinigung",
+        "shortDescription": "Intensive Reinigung für stark verschmutzte Bereiche.",
+        "icon": ""
+      },
+      {
+        "slug": "gartenpflege",
+        "title": "Gartenpflege",
+        "shortDescription": "Pflege und Reinigung Ihrer Außenanlagen.",
+        "icon": ""
+      }
+    ]
+  },
+
+  "ServicesDetails": {
+    "why-us": {
+      "title": "Warum wir?",
+      "reasons": {
+        "one": "Erfahrenes Reinigungsteam",
+        "two": "Umweltfreundliche Reinigungsmittel",
+        "three": "Flexible Zeitpläne"
+      }
+    },
+    "details": {
+      "haushaltsreinigung": {
+        "title": "Haushaltsreinigung",
+        "image": "/hero-image.jpg",
+        "shortDescription": "Sorgfältige Reinigung für ein frisches Zuhause.",
+        "icon": "",
+        "description": [
+          "Unsere Haushaltsreinigung sorgt für ein gepflegtes, hygienisches und gemütliches Zuhause. Von der Küche über das Wohnzimmer bis hin zum Schlafzimmer reinigen wir alle Wohnbereiche gründlich und zuverlässig.",
+          "Wir erstellen individuelle Reinigungspläne, die sich genau an Ihre Bedürfnisse anpassen. Dabei verwenden wir ausschließlich umweltfreundliche Reinigungsmittel und moderne Techniken, um für strahlende Sauberkeit zu sorgen."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Wohnräume staubsaugen",
+            "Küche reinigen",
+            "Bad desinfizieren"
+          ]
+        }
+      },
+      "buero-reinigung": {
+        "title": "Büroreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Gründliche Reinigung für produktive Arbeitsumgebungen.",
+        "icon": "",
+        "description": [
+          "Ein sauberes Büro ist die Grundlage für effizientes Arbeiten und einen positiven Eindruck bei Kunden und Geschäftspartnern. Unsere Büroreinigung schafft eine professionelle, ordentliche und hygienische Arbeitsumgebung.",
+          "Wir bieten flexible Zeitpläne – ob täglich, wöchentlich oder nach Absprache – und reinigen gründlich alle Bereiche: Schreibtische, Konferenzräume, Küchen und Sanitäranlagen. Unser geschultes Personal achtet dabei auf höchste Standards."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Arbeitsplätze reinigen",
+            "Sanitäranlagen desinfizieren",
+            "Böden saugen und wischen"
+          ]
+        }
+      },
+      "fensterreinigung": {
+        "title": "Fensterreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Streifenfreier Glanz für klare Sicht.",
+        "icon": "",
+        "description": [
+          "Unsere professionelle Fensterreinigung sorgt für streifenfreie, glasklare Ergebnisse – innen wie außen. Ideal für Wohnungen, Häuser und Geschäftsräume.",
+          "Mit speziellen Reinigungsmitteln und geschultem Personal reinigen wir auch schwer zugängliche Fenster sicher und gründlich."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Fensterrahmen abwischen",
+            "Glasflächen reinigen",
+            "Wasserrückstände entfernen"
+          ]
+        }
+      },
+      "teppichreinigung": {
+        "title": "Teppichreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Tiefenreinigung für frische und hygienische Teppiche.",
+        "icon": "",
+        "description": [
+          "Unsere Teppichreinigung entfernt tiefsitzenden Schmutz, Bakterien und Gerüche – für ein sauberes und gesundes Zuhause.",
+          "Wir setzen moderne Geräte und schonende Reinigungsmethoden ein, die Ihre Teppiche schonen und gleichzeitig eine effektive Reinigung gewährleisten."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Teppich absaugen",
+            "Tiefenreinigung mit Maschine",
+            "Trocknung und Pflege"
+          ]
+        }
+      },
+      "bauendreinigung": {
+        "title": "Bauendreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Professionelle Reinigung nach Bau- oder Renovierungsarbeiten.",
+        "icon": "",
+        "description": [
+          "Nach Bauarbeiten hinterlassen wir Ihre Immobilie bezugsfertig. Unsere Bauendreinigung entfernt Bauschutt, Staub und Schmutz restlos.",
+          "Wir reinigen alle Oberflächen gründlich – von Böden über Fenster bis zu Installationen – und schaffen perfekte Bedingungen für eine Übergabe oder Einzug."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Bauschutt beseitigen",
+            "Feinreinigung aller Oberflächen",
+            "Abnahmevorbereitung"
+          ]
+        }
+      },
+      "umzugsreinigung": {
+        "title": "Umzugsreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Makellose Übergabe bei Ein- oder Auszug.",
+        "icon": "",
+        "description": [
+          "Unsere Umzugsreinigung bereitet Ihre Wohnung oder Ihr Haus optimal für die Übergabe vor – ob beim Einzug oder Auszug.",
+          "Wir reinigen Küche, Bad, Böden und Fenster gründlich und sorgen für einen sauberen, stressfreien Neustart."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Küche und Bad gründlich reinigen",
+            "Böden und Fenster säubern",
+            "Wohnung abnahmebereit machen"
+          ]
+        }
+      },
+      "grundreinigung": {
+        "title": "Grundreinigung",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Intensive Reinigung für stark verschmutzte Bereiche.",
+        "icon": "",
+        "description": [
+          "Die Grundreinigung ist ideal für besonders beanspruchte oder lange nicht gereinigte Bereiche. Sie entfernt tiefsitzenden Schmutz, Kalk und hartnäckige Flecken.",
+          "Perfekt für eine jährliche Intensivreinigung oder vor wichtigen Anlässen."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": [
+            "Oberflächen intensiv reinigen",
+            "Fugen säubern",
+            "Hartnäckige Flecken entfernen"
+          ]
+        }
+      },
+      "gartenpflege": {
+        "title": "Gartenpflege",
+        "image": "/hero-image.jpg",
+        "shortDescription": "Pflege und Reinigung Ihrer Außenanlagen.",
+        "icon": "",
+        "description": [
+          "Unsere Gartenpflege sorgt für ein gepflegtes, einladendes Erscheinungsbild Ihrer Außenflächen. Wir kümmern uns um Rasen, Beete und Gehwege mit größter Sorgfalt.",
+          "Regelmäßige Pflege steigert nicht nur den Wert Ihrer Immobilie, sondern auch Ihr Wohlbefinden im eigenen Zuhause."
+        ],
+        "steps": {
+          "title": "So läuft der Service ab",
+          "items": ["Rasen mähen", "Beete säubern", "Gehwege reinigen"]
+        }
+      }
     }
   }
 }

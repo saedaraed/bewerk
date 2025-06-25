@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import Button from "./Button";
+import { useTranslations } from "next-intl";
 
 const AboutSection = () => {
+     const t =  useTranslations("HomePage");
+  
   return (
     <section className="container w-[85%] mx-auto md:h-screen flex md:flex-row flex-col items-center md:mt-0 mt-30">
       <div className="md:w-[25%] w-full bg-white md:h-[583px] h-[200px] flex md:flex-col flex-row rounded-[40px] md:rounded-br-none md:rounded-tr-none rounded-bl-none rounded-br-none   overflow-hidden">
@@ -25,24 +29,19 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="md:w-[35%] w-full bg-[#2BA7FF] md:p-12 p-8 md:h-[724px] h-full md:rounded-[40px] rounded-tr-none rounded-none">
-        <h2 className="font-bold md:text-[48px] text-[30px] md:mb-6 mb-4">Über Bewerk</h2>
+        <h2 className="font-bold md:text-[48px] text-[30px] md:mb-6 mb-4">{t('aboutSection.title')}</h2>
         <p className="md:text-[20px] text-[16px] md:leading-[40px] leading-[30px]">
-          Bei Bewerk sind wir mehr als nur ein Reinigungsunternehmen – wir sind
-          Ihre Partner für eine gesündere und angenehmere Umgebung. Mit einem
-          engagierten Team, umweltfreundlichen Produkten und einem starken
-          Qualitätsversprechen bringen.
+        {t('aboutSection.paragraph1')}
         </p>
         <p className="md:text-[20px] text-[16px] md:leading-[40px] leading-[30px] mb-8">
-          Mit einem engagierten Team, umweltfreundlichen Produkten und einem
-          starken Qualitätsversprechen bringen.
+       {t('aboutSection.paragraph2')}
         </p>
-        <Button name="Mehr erfahren" />
+        <Button name= {t('aboutSection.button')} />
       </div>
       <div className="md:w-[40%] w-full bg-white text-black p-12 md:h-[583px] h-full rounded-[40px] rounded-tl-none md:rounded-bl-none rounded-tr-none overflow-hidden">
-        <h4 className="text-[20px] font-bold">Haushaltsreinigung</h4>
+        <h4 className="text-[20px] font-bold">{t('aboutSection.cardTitle')}</h4>
         <p className="md:text-[20px] text-[16px] md:leading-[40px] leading-[30px]">
-          Bei Bewerk legen wir großen Wert auf Qualität, Zuverlässigkeit und
-          Kundenzufriedenheit.
+         {t('aboutSection.cardDescription')}
         </p>
         <div className="flex flex-col md:gap-6 gap-4 mt-8">
           <div className="flex gap-4 items-center ">
@@ -63,7 +62,7 @@ const AboutSection = () => {
                 />
               </svg>
             </div>
-            <p className="md:text-[20px] text-[16px] ">Professionelle Reinigungsteams</p>
+            <p className="md:text-[20px] text-[16px] ">{t('aboutSection.features.feature1')}</p>
           </div>
           <div className="flex gap-4 items-center">
             <div className="w-[36px] h-[36px] bg-[#2BA7FF] rounded-full flex items-center justify-center ">
@@ -77,13 +76,13 @@ const AboutSection = () => {
                 <path
                   d="M11 5.5V11H15.125M19.25 11C19.25 12.0834 19.0366 13.1562 18.622 14.1571C18.2074 15.1581 17.5997 16.0675 16.8336 16.8336C16.0675 17.5997 15.1581 18.2074 14.1571 18.622C13.1562 19.0366 12.0834 19.25 11 19.25C9.91659 19.25 8.8438 19.0366 7.84286 18.622C6.84193 18.2074 5.93245 17.5997 5.16637 16.8336C4.40029 16.0675 3.7926 15.1581 3.37799 14.1571C2.96339 13.1562 2.75 12.0834 2.75 11C2.75 8.81196 3.61919 6.71354 5.16637 5.16637C6.71354 3.61919 8.81196 2.75 11 2.75C13.188 2.75 15.2865 3.61919 16.8336 5.16637C18.3808 6.71354 19.25 8.81196 19.25 11Z"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-            <p className="md:text-[20px] text-[16px] ">Schneller & zuverlässiger Service</p>
+            <p className="md:text-[20px] text-[16px] ">{t('aboutSection.features.feature2')}</p>
           </div>
           <div className="flex gap-4 items-center">
             <div className="w-[36px] h-[36px] bg-[#2BA7FF] rounded-full flex items-center justify-center ">
@@ -97,13 +96,13 @@ const AboutSection = () => {
                 <path
                   d="M11 19.25C12.8287 19.2499 14.6057 18.6424 16.0518 17.523C17.4979 16.4036 18.5313 14.8356 18.9897 13.0653M11 19.25C9.17126 19.2499 7.39433 18.6424 5.94823 17.523C4.50212 16.4036 3.46874 14.8356 3.01034 13.0653M11 19.25C13.2779 19.25 15.125 15.5558 15.125 11C15.125 6.44417 13.2779 2.75 11 2.75M11 19.25C8.72209 19.25 6.875 15.5558 6.875 11C6.875 6.44417 8.72209 2.75 11 2.75M18.9897 13.0653C19.1593 12.4053 19.25 11.7132 19.25 11C19.2523 9.5811 18.8869 8.18582 18.1894 6.95017M18.9897 13.0653C16.5451 14.4204 13.7951 15.1294 11 15.125C8.1015 15.125 5.37809 14.3779 3.01034 13.0653M3.01034 13.0653C2.83685 12.3906 2.74938 11.6966 2.75 11C2.75 9.52875 3.135 8.14642 3.81059 6.95017M11 2.75C12.4632 2.74939 13.9003 3.13808 15.1637 3.87618C16.4271 4.61429 17.4714 5.67524 18.1894 6.95017M11 2.75C9.53678 2.74939 8.09974 3.13808 6.83633 3.87618C5.57291 4.61429 4.52862 5.67524 3.81059 6.95017M18.1894 6.95017C16.1935 8.67894 13.6405 9.6288 11 9.625C8.25184 9.625 5.73834 8.61667 3.81059 6.95017"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-            <p className="md:text-[20px] text-[16px] ">Umweltfreundliche Produkte</p>
+            <p className="md:text-[20px] text-[16px] ">{t('aboutSection.features.feature3')}</p>
           </div>
           <div className="flex gap-4 items-center">
             <div className="w-[36px] h-[36px] bg-[#2BA7FF] rounded-full flex items-center justify-center ">
@@ -117,13 +116,13 @@ const AboutSection = () => {
                 <path
                   d="M13.0625 5.57975C13.0625 5.25433 13.233 4.96008 13.4301 4.70067C13.6327 4.43483 13.75 4.1195 13.75 3.78125C13.75 2.83158 12.8269 2.0625 11.6875 2.0625C10.5481 2.0625 9.625 2.8325 9.625 3.78125C9.625 4.1195 9.74233 4.43483 9.94492 4.70067C10.142 4.96008 10.3125 5.25433 10.3125 5.57975C10.3129 5.65835 10.2975 5.73623 10.2672 5.80877C10.2369 5.8813 10.1924 5.94701 10.1362 6.00199C10.08 6.05697 10.0134 6.1001 9.94019 6.12881C9.86702 6.15753 9.78883 6.17126 9.71025 6.16917C8.43486 6.13243 7.16165 6.04067 5.89417 5.89417C6.06467 7.37275 6.16275 8.87333 6.18292 10.3923C6.18377 10.4719 6.16878 10.5509 6.13883 10.6248C6.10887 10.6986 6.06455 10.7657 6.00843 10.8223C5.95231 10.8788 5.88552 10.9236 5.81193 10.9542C5.73834 10.9847 5.65942 11.0002 5.57975 11C5.25433 11 4.96008 10.8295 4.70067 10.6324C4.43792 10.4272 4.11464 10.3147 3.78125 10.3125C2.83158 10.3125 2.0625 11.2356 2.0625 12.375C2.0625 13.5144 2.8325 14.4375 3.78125 14.4375C4.1195 14.4375 4.43483 14.3202 4.70067 14.1176C4.96008 13.9205 5.25433 13.75 5.57975 13.75C5.86392 13.75 6.0885 13.9883 6.06742 14.2725C5.9534 15.8267 5.75695 17.3738 5.47892 18.9072C6.87042 19.0813 8.28208 19.1904 9.71025 19.2317C9.78883 19.2338 9.86702 19.22 9.94019 19.1913C10.0134 19.1626 10.08 19.1195 10.1362 19.0645C10.1924 19.0095 10.2369 18.9438 10.2672 18.8713C10.2975 18.7987 10.3129 18.7209 10.3125 18.6423C10.3125 18.3168 10.142 18.0226 9.94492 17.7632C9.73969 17.5004 9.6272 17.1771 9.625 16.8438C9.625 15.895 10.549 15.125 11.6875 15.125C12.8269 15.125 13.75 15.895 13.75 16.8438C13.75 17.182 13.6327 17.4973 13.4301 17.7632C13.233 18.0226 13.0634 18.3168 13.0634 18.6423C13.0634 18.9475 13.3173 19.1913 13.6226 19.1739C15.2904 19.0758 16.9514 18.883 18.5973 18.5964C18.8464 17.1648 19.0244 15.7217 19.1308 14.2725C19.1356 14.2055 19.1265 14.1383 19.1041 14.0749C19.0817 14.0116 19.0465 13.9536 19.0006 13.9046C18.9547 13.8555 18.8992 13.8165 18.8376 13.7899C18.7759 13.7633 18.7094 13.7497 18.6423 13.75C18.3168 13.75 18.0226 13.9205 17.7632 14.1176C17.4973 14.3202 17.182 14.4375 16.8438 14.4375C15.895 14.4375 15.125 13.5144 15.125 12.375C15.125 11.2356 15.895 10.3125 16.8438 10.3125C17.1829 10.3125 17.4973 10.4298 17.7632 10.6324C18.0226 10.8295 18.3168 11 18.6432 11C18.7228 11.0002 18.8018 10.9847 18.8753 10.9542C18.9489 10.9236 19.0157 10.8788 19.0718 10.8223C19.128 10.7657 19.1723 10.6986 19.2022 10.6248C19.2322 10.5509 19.2472 10.4719 19.2463 10.3923C19.2243 8.74946 19.1111 7.10916 18.9072 5.47892C17.1783 5.79242 15.4147 6.00508 13.6217 6.1105C13.5495 6.1145 13.4773 6.1037 13.4095 6.07875C13.3416 6.05381 13.2796 6.01525 13.2272 5.96545C13.1749 5.91565 13.1332 5.85566 13.1049 5.78917C13.0766 5.72269 13.0621 5.65202 13.0625 5.57975Z"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-            <p className="md:text-[20px] text-[16px] ">Individuell anpassbare Leistungen</p>
+            <p className="md:text-[20px] text-[16px] ">{t('aboutSection.features.feature4')}</p>
           </div>
         </div>
       </div>

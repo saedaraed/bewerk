@@ -1,15 +1,18 @@
+"use client"
+import { useTranslations } from "next-intl";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
+         const t =  useTranslations("Contact");
+  
   return (
     <section className="container w-[85%] mx-auto mt-40 bg-[#1E1D1D] rounded-[40px] md:p-20 p-12 flex md:flex-row flex-col">
       <div className="md:w-1/2 w-full md:pr-20">
         <h4 className="text-[20px] font-bold leading-[40px]">
-          Kontaktiere uns für weitere Informationen – wir sind für dich da!
+           {t('title')}
         </h4>
         <p className="text-[16px] leading-[40px] text-white/80 mt-4">
-          Registriere dich jetzt und profitiere von allen Vorteilen – starte mit
-          bewerk die Veränderung deines Zuhauses oder Büros!
+          {t('description')}
         </p>
         <div className="flex items-center gap-2 mt-8">
           <svg
@@ -26,7 +29,7 @@ const Contact = () => {
               fill="white"
             />
           </svg>
-          <span className="text-[16px]"> Heidelberg, Deutschland</span>
+          <span className="text-[16px]"> {t('location')} </span>
         </div>
         <div className="flex justify-between mt-6">
           <div className="flex items-center gap-2">
@@ -44,14 +47,14 @@ const Contact = () => {
                 fill="white"
               />
             </svg>
-            <span className="text-[16px]">(123) 456-7890</span>
+            <span className="text-[16px]">{t('phone')}</span>
           </div>
            <div className="flex items-center gap-2">
             <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 0.822754H3C1.89543 0.822754 1 1.60138 1 2.56187V12.9965C1 13.957 1.89543 14.7357 3 14.7357H22C23.1046 14.7357 24 13.957 24 12.9965V2.56187C24 1.60138 23.1046 0.822754 22 0.822754Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M23.411 1.32861L12.5 9.08332L1.58899 1.32861" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-            <span className="text-[16px]">info@bewerk.net</span>
+            <span className="text-[16px]">{t('email')}</span>
 
 
            </div>

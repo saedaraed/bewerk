@@ -1,44 +1,32 @@
 import Button from "@/components/Button";
 import Contact from "@/components/Contact";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-interface BranchData {
-  title: string;
-  name: string;
-  description: string | string[];
-  steps: string[];
-}
+type Props = {
+  params: {
+    locale: string;
+    slug: string;
+  };
+};
 
 
-const servicesData: Record<string, BranchData> = {
-  haushaltsreinigung: {
-    title: "Professionelle Büroreinigung für Ihren Erfolg",
-    name: "Büroreinigung",
-    description: [
-      "Unsere Büroreinigungsdienste sorgen nicht nur für Ordnung, sondern schaffen auch eine hygienische und angenehme Atmosphäre, in der sich Ihre Mitarbeitenden und Kund:innen wohlfühlen. Ein sauberes Büro steigert nicht nur die Produktivität, sondern hinterlässt auch einen positiven Eindruck bei Besuchern und Geschäftspartnern.",
-      "Wir bieten flexible Reinigungsintervalle – ob täglich, wöchentlich oder individuell nach Ihrem Bedarf. Unser geschultes Fachpersonal verwendet umweltfreundliche Reinigungsmittel und moderne Techniken, um jedes Detail gründlich zu reinigen – von Schreibtischen über Gemeinschaftsflächen bis hin zu Sanitäranlagen.",
-    ],
-    steps: [
-      "Erfahrenes Reinigungsteam",
-      "Erstellung eines Reinigungsplans",
-      "Durchführung durch unser geschultes Personal",
-      "Regelmäßige Qualitätskontrollen",
-    ],
-  },
-  //   fff: {
-  //     title: 'industrie',
-  //     description: 'Unsere Buroreinigungsdienste sorgen',
-  //   },
-}as const;
 
-type BranchKey = keyof typeof servicesData;
+export default async function ServiceDetails(props: Props) {
+      const { slug } = props.params;
+  const t = await getTranslations("ServicesDetails");
+  const translate = await getTranslations("HomePage");
 
-
-export default async function ServiceDetails({ params }: {
-  params: Promise<{ slug: BranchKey }> 
-}) {
-  const { slug } = await params;
-  const service = servicesData[slug];
+const service = t.raw(`details.${slug}`) as {
+    title: string;
+    name: string; 
+    image:string;
+    description: string[];
+    steps: {
+      title: string;
+      items: string[];
+    };
+  };
 
   if (!service) {
     return <p>Service not found</p>;
@@ -48,15 +36,16 @@ export default async function ServiceDetails({ params }: {
     <main>
       <div className="w-full h-[380px] flex items-center justify-center bg-[#100F0F] absolute z-10 top-0">
         <h1 className="font-bold md:text-[48px] text-[30px] text-center mb-14">
-          {service.title}
+         {service.title}
+
         </h1>
       </div>
 
       <div className="container w-[70%] mx-auto">
         <div className="w-full h-[60vh] rounded-[40px] overflow-hidden relative z-20 mt-[200px]">
           <Image
-            src="/hero-image.jpg"
-            alt="hero-image"
+            src={service.image}
+            alt={service.title}
             width={600}
             height={600}
             className="w-full h-full object-cover "
@@ -72,8 +61,8 @@ export default async function ServiceDetails({ params }: {
         ) : (
           <p className="text-[20px] text-white/80 mt-8">{service.description}</p>
         )}
-        <h4 className="text-[20px] font-bold mt-12">So läuft der Service ab</h4>
-        {service.steps.map((step , index) => (
+        <h4 className="text-[20px] font-bold mt-12">{service.steps.title}</h4>
+        {service.steps.items.map((step , index) => (
           <div className="flex gap-4 mt-6" key={index}>
             <svg
               width="22"
@@ -97,7 +86,7 @@ export default async function ServiceDetails({ params }: {
             <p className="text-[20px] text-white/80">{step}</p>
           </div>
         ))}
-        <h4 className="text-[20px] font-bold mt-12">Warum wir?</h4>
+        <h4 className="text-[20px] font-bold mt-12">{t('why-us.title')}</h4>
 
         <div className="mt-8 flex md:flex-row flex-col items-center justify-between gap-8">
           <div className="flex flex-col items-center">
@@ -1619,7 +1608,7 @@ export default async function ServiceDetails({ params }: {
               </svg>
             </div>
             <p className="text-[20px] text-white/80 mt-4 text-center">
-              Erfahrenes Reinigungsteam
+              {t('why-us.reasons.one')}
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -1712,7 +1701,7 @@ export default async function ServiceDetails({ params }: {
               </svg>
             </div>
             <p className="text-[20px] text-white/80 mt-4 text-center">
-              Umweltfreundliche Reinigungsmittel
+              {t('why-us.reasons.two')}
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -1806,7 +1795,8 @@ export default async function ServiceDetails({ params }: {
                 />
               </svg>
             </div>
-            <p className="text-[20px] text-white/80 mt-4 text-center">Flexible Zeitpläne</p>
+            <p className="text-[20px] text-white/80 mt-4 text-center">              {t('why-us.reasons.three')}
+</p>
           </div>
         </div>
         <h4 className="text-[20px] font-bold mt-12">Our Work</h4>
@@ -1850,7 +1840,8 @@ export default async function ServiceDetails({ params }: {
        
         </div>
         <div className="my-8 flex justify-center mb-[200px]">
-      <Button name="Jetzt buchen"/>
+          <Button name={translate('heroSection.bookNow')}/>
+
 
         </div>
       </div>

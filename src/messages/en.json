@@ -1,10 +1,360 @@
 {
   "HomePage": {
+       "navbar":{
+      "home":"Home",
+      "about":"About",
+      "services":"Services",
+      "branches":"Branches",
+      "job" :"Job",
+      "partner-job":"Partner Job",
+      "contact":"Contact"
+    },
     "heroSection": {
       "title": "Your home deserves the best",
       "cleaning": "cleaning",
       "description": "Experience professional cleaning services that leave your space spotless, fresh, and hygienic. Leave the work to us and enjoy your free time.",
       "bookNow": "Book Now"
+    },
+    "aboutSection": {
+      "title": "About Bewerk",
+      "paragraph1": "At Bewerk, we’re more than just a cleaning company – we’re your partners in creating a healthier and more pleasant environment. With a dedicated team, eco-friendly products, and a strong commitment to quality, we deliver excellence.",
+      "paragraph2": "With a dedicated team, eco-friendly products, and a strong commitment to quality, we deliver excellence.",
+      "button": "Learn More",
+      "cardTitle": "Household Cleaning",
+      "cardDescription": "At Bewerk, we place great value on quality, reliability, and customer satisfaction.",
+      "features": {
+        "feature1": "Professional cleaning teams",
+        "feature2": "Fast & reliable service",
+        "feature3": "Eco-friendly products",
+        "feature4": "Customizable services"
+      }
+    },
+    "appSection": {
+      "title": "Our App",
+      "description": "Our innovative app helps your business manage employees efficiently, improve quality, and collect valuable feedback from customers. With a complete system for team and task management, nothing is left to be desired – all in one app.",
+      "features": [
+        {
+          "title": "Google Live Tracking",
+          "description": "Track your employees or orders in real time using Google Maps."
+        },
+        {
+          "title": "Order Live Tracking",
+          "description": "Customers can check the status of their order at any time."
+        },
+        {
+          "title": "Checklist",
+          "description": "Keep tasks organized and in full view – no steps forgotten."
+        },
+        {
+          "title": "Photos",
+          "description": "Document with before-and-after images directly from the app."
+        },
+        {
+          "title": "Videos",
+          "description": "Provide even more transparency through short service videos."
+        },
+        {
+          "title": "Comments",
+          "description": "Customers can give direct feedback, team members communicate internally."
+        }
+      ],
+      "footer": {
+        "text": "Download now and take your cleaning to the next level!",
+        "button": "Download App"
+      }
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "testi": [
+        {
+          "name": "Sarah L.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Bewerk made our office sparkle! Very punctual and professional service. Highly recommended!"
+        },
+        {
+          "name": "Michael T.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Exceptional cleaning, friendly staff, and reliable. I will definitely use their services again."
+        },
+        {
+          "name": "Anna K.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Quick and thorough cleaning. The team is very professional and respectful."
+        },
+        {
+          "name": "James B.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Great experience! My home feels fresh and clean thanks to Bewerk."
+        },
+        {
+          "name": "James B.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Great experience! My home feels fresh and clean thanks to Bewerk."
+        },
+        {
+          "name": "James B.",
+          "image": "/person.jpg",
+          "rating": 5,
+          "review": "Great experience! My home feels fresh and clean thanks to Bewerk."
+        }
+      ]
+    }
+  },
+  "Contact": {
+    "high-title":"Contact us for more information",
+    "title": "Contact us for more information – we’re here for you!",
+    "description": "Register now and take advantage of all the benefits – start transforming your home or office with bewerk!",
+    "location": "Heidelberg, Germany",
+    "phone": "(123) 456-7890",
+    "email": "info@bewerk.net"
+  },
+  "Partner-job": {
+  "title": "Partnership Request - Form",
+  "question": "Do you believe in our values and want to be part of our success?",
+ "answer":" Fill out this form to apply as a partner and help shape the future together.",
+  "form-title": "Application Form",
+  "owner-name": "Owner Name",
+  "company-name": "Company Name",
+  "email": "Email",
+  "telephone": "Phone Number",
+  "address": "Address",
+  "birth-date": "Date of Birth",
+  "message": "Tell us about yourself",
+  "send": "Send"
+},
+"Job": {
+  "title": "Join Our Team",
+  "description": "At Bewek, we are always looking for dedicated and motivated individuals who want to strengthen our team. If you are looking for a professional opportunity in a pleasant and supportive environment – then you’ve come to the right place!",
+  "form-title": "Application Form",
+  "Full-name": "Full Name",
+  "email": "Email",
+  "telephone": "Phone Number",
+  "gender": "Gender",
+  "female":"Female",
+"male":"Male",
+  "address": "Address",
+  "birth-date": "Date of Birth",
+  "message": "Tell us about yourself",
+  "send": "Send"
+},
+  "Services": {
+    "title": "Our Services",
+    "description": "Tailored cleaning solutions for the highest standards.",
+    "services": [
+      {
+        "slug": "haushaltsreinigung",
+        "title": "House Cleaning",
+        "shortDescription": "Thorough cleaning for a fresh home.",
+        "icon": ""
+      },
+      {
+        "slug": "buero-reinigung",
+        "title": "Office Cleaning",
+        "shortDescription": "Deep cleaning for productive workspaces.",
+        "icon": ""
+      },
+      {
+        "slug": "fensterreinigung",
+        "title": "Window Cleaning",
+        "shortDescription": "Streak-free shine for clear views.",
+        "icon": ""
+      },
+      {
+        "slug": "teppichreinigung",
+        "title": "Carpet Cleaning",
+        "shortDescription": "Deep cleaning for fresh and hygienic carpets.",
+        "icon": ""
+      },
+      {
+        "slug": "bauendreinigung",
+        "title": "Post-Construction Cleaning",
+        "shortDescription": "Professional cleaning after construction or renovation work.",
+        "icon": ""
+      },
+      {
+        "slug": "umzugsreinigung",
+        "title": "Move-In/Out Cleaning",
+        "shortDescription": "Spotless handover when moving in or out.",
+        "icon": ""
+      },
+      {
+        "slug": "grundreinigung",
+        "title": "Deep Cleaning",
+        "shortDescription": "Intensive cleaning for heavily soiled areas.",
+        "icon": ""
+      },
+      {
+        "slug": "gartenpflege",
+        "title": "Garden Maintenance",
+        "shortDescription": "Care and cleaning of your outdoor areas.",
+        "icon": ""
+      }
+    ]
+  },
+
+  "ServicesDetails": {
+    "why-us": {
+      "title": "Why Us?",
+      "reasons": {
+        "one": "Experienced cleaning team",
+        "two": "Eco-friendly cleaning products",
+        "three": "Flexible schedules"
+      }
+    },
+    "details": {
+      "haushaltsreinigung": {
+        "title": "House Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Thorough cleaning for a fresh home.",
+        "icon": "",
+        "description": [
+          "Our house cleaning service ensures a well-maintained, hygienic, and cozy home. From the kitchen to the living room to the bedroom, we thoroughly and reliably clean all living areas.",
+          "We create customized cleaning plans tailored to your specific needs. Using eco-friendly cleaning agents and modern techniques, we deliver sparkling cleanliness."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Vacuum living areas",
+            "Clean the kitchen",
+            "Disinfect the bathroom"
+          ]
+        }
+      },
+      "buero-reinigung": {
+        "title": "Office Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Thorough cleaning for productive work environments.",
+        "icon": "",
+        "description": [
+          "A clean office is the foundation for efficient work and a positive impression on clients and partners. Our office cleaning service creates a professional, tidy, and hygienic workspace.",
+          "We offer flexible schedules—daily, weekly, or on request—and thoroughly clean all areas: desks, meeting rooms, kitchens, and restrooms. Our trained staff adheres to the highest standards."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Clean workspaces",
+            "Disinfect restrooms",
+            "Vacuum and mop floors"
+          ]
+        }
+      },
+      "fensterreinigung": {
+        "title": "Window Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Streak-free shine for a clear view.",
+        "icon": "",
+        "description": [
+          "Our professional window cleaning delivers streak-free, crystal-clear results—inside and out. Ideal for homes, apartments, and commercial spaces.",
+          "Using specialized cleaning products and trained staff, we safely and thoroughly clean even hard-to-reach windows."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Wipe window frames",
+            "Clean glass surfaces",
+            "Remove water residue"
+          ]
+        }
+      },
+      "teppichreinigung": {
+        "title": "Carpet Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Deep cleaning for fresh and hygienic carpets.",
+        "icon": "",
+        "description": [
+          "Our carpet cleaning removes deeply embedded dirt, bacteria, and odors—for a clean and healthy home.",
+          "We use modern equipment and gentle cleaning methods that protect your carpets while ensuring effective cleaning."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Vacuum the carpet",
+            "Deep clean with machine",
+            "Dry and care"
+          ]
+        }
+      },
+      "bauendreinigung": {
+        "title": "Post-Construction Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Professional cleaning after construction or renovation.",
+        "icon": "",
+        "description": [
+          "After construction work, we leave your property ready to move in. Our post-construction cleaning removes all debris, dust, and dirt.",
+          "We thoroughly clean all surfaces—from floors and windows to fixtures—ensuring perfect conditions for handover or move-in."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Remove construction debris",
+            "Detailed surface cleaning",
+            "Prepare for inspection or handover"
+          ]
+        }
+      },
+      "umzugsreinigung": {
+        "title": "Move-In/Out Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Spotless results for handover when moving in or out.",
+        "icon": "",
+        "description": [
+          "Our move-in/out cleaning service prepares your apartment or house perfectly for handover—whether you're moving in or out.",
+          "We thoroughly clean kitchens, bathrooms, floors, and windows to ensure a clean, stress-free new beginning."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Thoroughly clean kitchen and bathroom",
+            "Clean floors and windows",
+            "Prepare apartment for handover"
+          ]
+        }
+      },
+      "grundreinigung": {
+        "title": "Deep Cleaning",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Intensive cleaning for heavily soiled areas.",
+        "icon": "",
+        "description": [
+          "Deep cleaning is ideal for areas that are heavily used or haven't been cleaned in a long time. It removes deeply embedded dirt, limescale, and stubborn stains.",
+          "Perfect for annual intensive cleaning or before special events."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": [
+            "Deep clean surfaces",
+            "Clean tile grout",
+            "Remove stubborn stains"
+          ]
+        }
+      },
+      "gartenpflege": {
+        "title": "Garden Care",
+        "image": "/hero-image.jpg",
+
+        "shortDescription": "Maintenance and cleaning of your outdoor areas.",
+        "icon": "",
+        "description": [
+          "Our garden care service ensures a well-maintained, inviting appearance of your outdoor spaces. We carefully maintain lawns, flower beds, and walkways.",
+          "Regular maintenance not only increases your property's value but also your well-being at home."
+        ],
+        "steps": {
+          "title": "How the service works",
+          "items": ["Mow the lawn", "Clean flower beds", "Clean walkways"]
+        }
+      }
     }
   }
 }
