@@ -16,7 +16,7 @@ const HeroSection = () => {
         <p className="md:text-[20px] text-[16px] leading-[40px] md:mb-12 mb-6">
          {t('heroSection.description')}
         </p>
-        <Button name={t('heroSection.bookNow')}/>
+        <Button name={t('heroSection.bookNow')} href="/contact"/>
       </div>
       <div className="md:w-1/2 w-full  md:h-[70%] h-[50%] md:mt-0 mt-6">
 <div className="w-full h-full rounded-[40px] rounded-tr-none overflow-hidden">

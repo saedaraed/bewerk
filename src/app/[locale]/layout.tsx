@@ -44,6 +44,11 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
+         <div className="glow-wrapper">
+  <div className="glow green" />
+  <div className="glow right" />
+  <div className="glow blue" />
+</div>
           {children}
           <Footer/>
         </NextIntlClientProvider>

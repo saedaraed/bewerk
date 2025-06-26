@@ -5,8 +5,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getAllServiceSlugs() {
-  const enMessages = await import('../../../../messages/en.json');
-  const serviceDetails = enMessages.ServicesDetails.details;
+  const deMessages = await import('../../../../messages/de.json');
+  const serviceDetails = deMessages.ServicesDetails.details;
   return Object.keys(serviceDetails);
 }
 type Props = {

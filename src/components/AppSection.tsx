@@ -10,7 +10,7 @@ const AppSection = () => {
   return (
     <section className="container w-[85%] mx-auto  mt-[150px]">
       <div className="relative flex flex-col items-center justify-center md:mb-14 mb-[150px]">
-        <div className=" bg-black w-full absolute z-10">
+        <div className=" bg-black inline-block absolute z-10">
           <h2 className="font-bold md:text-[48px] text-[30px] text-center  ">
             {t('title')} 
           </h2>
