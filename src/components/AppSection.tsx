@@ -1,18 +1,28 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Button from "./Button";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AppSection = () => {
-       const t =  useTranslations("HomePage.appSection");
-    const features = t.raw("features") as { title: string; description: string }[];
+  const t = useTranslations("HomePage.appSection");
+  const features = t.raw("features") as {
+    title: string;
+    description: string;
+  }[];
+  const [ref, inView] = useInView({   triggerOnce: true,
+  threshold: 0,
+  rootMargin: "-50% 0px -50% 0px"
+});
+console.log("inView:", inView);
 
   return (
-    <section className="container w-[85%] mx-auto  mt-[150px]">
+    <section ref={ref} className="container w-[85%] mx-auto  mt-[150px]">
       <div className="relative flex flex-col items-center justify-center md:mb-14 mb-[150px]">
         <div className=" bg-black inline-block absolute z-10">
           <h2 className="font-bold md:text-[48px] text-[30px] text-center  ">
-            {t('title')} 
+            {t("title")}
           </h2>
         </div>
         <div>
@@ -36,9 +46,18 @@ const AppSection = () => {
           </svg>
         </div>
       </div>
-      <div className="bg-[#100F0F] rounded-[40px] rounded-tr-none  md:p-20 p-12">
+      <motion.div
+        
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={inView ? { scale: 1, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="bg-[#100F0F] rounded-[40px] rounded-tr-none  md:p-20 p-12"
+      >
         <div className="flex md:flex-row flex-col gap-8">
-          <div className="md:w-[40%] w-full mt-[-200px]">
+          <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} className="md:w-[40%] w-full mt-[-200px]">
             <Image
               src="/mobileapp.png"
               alt="mobile-app"
@@ -46,30 +65,34 @@ const AppSection = () => {
               height={600}
               className="w-full h-full object-cover "
             />
-          </div>
-          <p className="md:w-[60%] w-full md:leading-[40px] leading-[30px] md:text-[20px] text-[16px] text-white/80">
-           {t('description')} 
-          </p>
+          </motion.div>
+          <motion.p       initial={{ scale: 1.2, opacity: 0 }}
+          animate={inView ? { scale: 1, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }} className="md:w-[60%] w-full md:leading-[40px] leading-[30px] md:text-[20px] text-[16px] text-white/80">
+            {t("description")}
+          </motion.p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <motion.div
+          initial={{ scale: 1.2, opacity: 0 }}
+          animate={inView ? { scale: 1, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {features.map((feature, index) => (
-<div key={index}>
-            <h4 className="text-[20px] mt-4 font-medium">
-              {feature.title}
-            </h4>
-            <p className="text-[16px] text-white/80 mt-2">
-             {feature.description}
-            </p>
-          </div>
-           ))}
-          
-        </div> 
-        <div className="flex md:flex-row flex-col gap-4 justify-center items-center mt-8 ">
-          <p className="text-[20px]">
-{t('footer.text')}           </p>
-          <Button name={t('footer.button')} />
-        </div>
-      </div>
+            <div key={index}>
+              <h4 className="text-[20px] mt-4 font-medium">{feature.title}</h4>
+              <p className="text-[16px] text-white/80 mt-2">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ scale: 1.2, opacity: 0 }}
+          animate={inView ? { scale: 1, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }} className="flex md:flex-row flex-col gap-4 justify-center items-center mt-8 ">
+          <p className="text-[20px]">{t("footer.text")} </p>
+          <Button name={t("footer.button")} />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

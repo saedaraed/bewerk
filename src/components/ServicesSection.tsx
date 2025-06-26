@@ -9,7 +9,7 @@ const ServicesSection = async () => {
   return (
     <section className="container w-[85%] mx-auto mt-20">
       <div className="relative flex flex-col items-center justify-center mb-14">
-        <div className=" bg-black inline-block  absolute z-10">
+        <div className=" bg-black inline-block absolute z-10">
           <h2 className="font-bold md:text-[48px] text-[30px] text-center  ">
           {t('title-section')}
           </h2>
