@@ -10,7 +10,8 @@ interface BranchCardProps {
 const BranchCard: React.FC<BranchCardProps> = ({ imageSrc, title, link }) => {
     const locale = useLocale(); 
   return (
-    <Link  href={`/${locale}/branches/${link}`} className="relative rounded-[40px] rounded-tr-none overflow-hidden">
+    <div className="relative rounded-[40px] rounded-tr-none overflow-hidden">
+    <Link  href={`/${locale}/branches/${link}`} >
       <div className="absolute top-0 right-0 h-full w-[75px] bg-[#2BA7FF] z-10 rounded-tr-none rounded-br-[40px]" />
 
       <div className="relative bg-[#100F0F] p-8 ">
@@ -28,6 +29,7 @@ const BranchCard: React.FC<BranchCardProps> = ({ imageSrc, title, link }) => {
         </div>
       </div>
     </Link>
+    </div>
   );
 };
 

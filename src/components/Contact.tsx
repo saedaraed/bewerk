@@ -1,18 +1,30 @@
-"use client"
+"use client";
 import { useTranslations } from "next-intl";
 import ContactForm from "./ContactForm";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
-         const t =  useTranslations("Contact");
-  
+  const t = useTranslations("Contact");
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    rootMargin: "-50% 0px -50% 0px",
+  });
   return (
-    <section className="container w-[85%] mx-auto mt-40 bg-[#1E1D1D] rounded-[40px] md:p-20 p-12 flex md:flex-row flex-col">
-      <div className="md:w-1/2 w-full md:pr-20">
-        <h4 className="text-[20px] font-bold leading-[40px]">
-           {t('title')}
-        </h4>
+    <motion.section
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={inView ? { scale: 1, opacity: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      ref={ref}
+      className="container w-[85%] mx-auto mt-40 bg-[#1E1D1D] rounded-[40px] md:p-20 p-12 flex md:flex-row flex-col"
+    >
+      <motion.div  initial={{ scale: 1.2, opacity: 0 }}
+          animate={inView ? { scale: 1, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }} className="md:w-1/2 w-full md:pr-20">
+        <h4 className="text-[20px] font-bold leading-[40px]">{t("title")}</h4>
         <p className="text-[16px] leading-[40px] text-white/80 mt-4">
-          {t('description')}
+          {t("description")}
         </p>
         <div className="flex items-center gap-2 mt-8">
           <svg
@@ -29,7 +41,7 @@ const Contact = () => {
               fill="white"
             />
           </svg>
-          <span className="text-[16px]"> {t('location')} </span>
+          <span className="text-[16px]"> {t("location")} </span>
         </div>
         <div className="flex justify-between mt-6">
           <div className="flex items-center gap-2">
@@ -47,24 +59,43 @@ const Contact = () => {
                 fill="white"
               />
             </svg>
-            <span className="text-[16px]">{t('phone')}</span>
+            <span className="text-[16px]">{t("phone")}</span>
           </div>
-           <div className="flex items-center gap-2">
-            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 0.822754H3C1.89543 0.822754 1 1.60138 1 2.56187V12.9965C1 13.957 1.89543 14.7357 3 14.7357H22C23.1046 14.7357 24 13.957 24 12.9965V2.56187C24 1.60138 23.1046 0.822754 22 0.822754Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.411 1.32861L12.5 9.08332L1.58899 1.32861" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-            <span className="text-[16px]">{t('email')}</span>
-
-
-           </div>
+          <div className="flex items-center gap-2">
+            <svg
+              width="25"
+              height="16"
+              viewBox="0 0 25 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 0.822754H3C1.89543 0.822754 1 1.60138 1 2.56187V12.9965C1 13.957 1.89543 14.7357 3 14.7357H22C23.1046 14.7357 24 13.957 24 12.9965V2.56187C24 1.60138 23.1046 0.822754 22 0.822754Z"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.411 1.32861L12.5 9.08332L1.58899 1.32861"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span className="text-[16px]">{t("email")}</span>
+          </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="md:w-1/2 w-ful md:mt-[-200px] mt-4">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        className="md:w-1/2 w-ful md:mt-[-200px] mt-4"
+      >
         <ContactForm />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

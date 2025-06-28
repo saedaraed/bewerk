@@ -2,6 +2,20 @@
 import { Link, usePathname } from "../i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
+import { motion ,easeInOut  } from "framer-motion";
+
+const navbarVariants = {
+  hidden: { opacity: 0, y: -30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: easeInOut, 
+    },
+  },
+};
 const Navbar = () => {
      const t =  useTranslations("HomePage");
   
@@ -18,7 +32,9 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav key={locale} className="relative z-50 w-full px-4 md:px-0 bg-transparent">
+    <motion.nav  variants={navbarVariants}
+      initial="hidden"
+      animate="visible" key={locale} className="relative z-50 w-full px-4 md:px-0 bg-transparent">
       <div className=" container w-[85%] mx-auto flex justify-between items-center py-6">
         <div className="logo">
           <h4 className="text-[28px]">Bewerk</h4>
@@ -231,7 +247,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
