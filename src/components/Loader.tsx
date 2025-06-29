@@ -129,7 +129,7 @@ const icons = [
                     damping: 12,
                     duration: 0.8,
                   }}
-                  className="absolute w-[95px] h-[95px] bg-[#100F0F] rounded-[24px] flex items-center justify-center text-white font-bold text-xl"
+                  className="absolute w-[95px] h-[95px] bg-[#100F0F] rounded-[24px] flex items-center justify-center text-white font-bold text-xl p-4"
                 >
                    {icon.type === "text" ? (
         <span className="text-white text-xl font-bold">{icon.label}</span>

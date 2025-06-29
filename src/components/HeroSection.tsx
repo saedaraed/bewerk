@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion ,easeInOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const HeroSection = () => {
+const HeroSection = ({ onSwitch }: { onSwitch: () => void }) => {
   const t = useTranslations("HomePage");
   const fullTitle = t("heroSection.title");
   const words = fullTitle.split(" ");
@@ -70,6 +70,7 @@ const HeroSection = () => {
         >
           {" "}
           <Button name={t("heroSection.bookNow")} href="/contact" />
+          <button   onClick={onSwitch}>Test</button>
         </motion.div>
       </motion.div>
       <motion.div className="md:w-1/2 w-full  md:h-[70%] h-[50%] md:mt-0 mt-6"     variants={fadeUpSmooth}
